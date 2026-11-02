@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
+  <!-- Redirection automatique vers l'accueil après 5 secondes -->
+  <meta http-equiv="refresh" content="5;url=index.html">
+
   <!-- Favicon -->
   <link rel="icon" type="image/jpeg" href="images/favicon.jpg">
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
@@ -30,7 +33,7 @@
       </a>
 
       <div class="nav-cta">
-        <a href="tel:0758361017" class="btn btn-secondary-dark"><i class="fa-solid fa-phone"></i> 07 58 36 10 17</a>
+        <a href="tel:0758361017" class="btn btn-secondary-dark">07 58 36 10 17</a>
       </div>
     </div>
   </header>
@@ -45,25 +48,29 @@
           </svg>
         </div>
 
-        <span class="section-tag">Demande bien enregistrée</span>
-        <h1>Merci pour votre confiance !</h1>
+        <span class="section-tag">Demande bien reçue</span>
+        <h1>Merci pour votre message !</h1>
         
         <p class="confirmation-text">
-          Nous avons bien reçu votre demande de devis pour votre projet de rénovation ou construction à Toulouse. Notre conducteur de travaux étudie actuellement vos besoins techniques et vous recontactera <strong>dans les meilleurs délais (sous 24h à 48h ouvrées)</strong> pour convenir d'une visite et vous établir une estimation claire et détaillée.
+          Nous vous remercions chaleureusement pour l'intérêt que vous portez à <strong>Toulouse Construction</strong>. Votre demande a bien été transmise à notre équipe. Notre conducteur de travaux analyse votre projet et s'engage à <strong>vous répondre dans les meilleurs délais</strong> afin d'échanger avec vous et établir une première estimation détaillée.
+        </p>
+
+        <p class="auto-redirect-notice">
+          <i class="fa-solid fa-rotate"></i> Redirection automatique vers le site dans <span id="countdown">5</span> secondes...
         </p>
 
         <div class="confirmation-summary-box">
-          <h3>Besoin d'un renseignement immédiat ?</h3>
-          <p>Notre équipe reste à votre écoute du lundi au samedi de 8h00 à 19h00 :</p>
+          <h3>Une question urgente sur votre projet ?</h3>
+          <p>Vous pouvez également nous joindre directement :</p>
           <div class="confirm-links">
-            <a href="tel:0758361017" class="contact-pill"><i class="fa-solid fa-phone"></i> 07 58 36 10 17</a>
-            <a href="mailto:toulouse.building@gmail.com" class="contact-pill"><i class="fa-solid fa-envelope"></i> toulouse.building@gmail.com</a>
+            <a href="tel:0758361017" class="contact-pill">Téléphone : 07 58 36 10 17</a>
+            <a href="mailto:toulouse.building@gmail.com" class="contact-pill">toulouse.building@gmail.com</a>
           </div>
         </div>
 
         <div class="confirmation-actions">
           <a href="index.html" class="btn btn-primary btn-large">
-            <i class="fa-solid fa-arrow-left"></i> Retourner à la page d'accueil
+            Retour au site
           </a>
         </div>
       </div>
@@ -90,5 +97,18 @@
     </div>
   </footer>
 
+  <script>
+    // Compteur visuel de 5 secondes avant redirection automatique
+    let timeLeft = 5;
+    const countdownEl = document.getElementById('countdown');
+    const timer = setInterval(() => {
+      timeLeft--;
+      if (countdownEl) countdownEl.textContent = timeLeft;
+      if (timeLeft <= 0) {
+        clearInterval(timer);
+        window.location.href = 'index.html';
+      }
+    }, 1000);
+  </script>
 </body>
 </html>

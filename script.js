@@ -35,14 +35,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { passive: true });
   }
 
-  // Configuration dynamique de la page de redirection du formulaire FormSubmit
-  const contactForm = document.getElementById('contact-form');
+  // Initialisation sécurisée de l'URL absolue de redirection pour FormSubmit
   const nextInput = document.getElementById('form-next-url');
-  if (contactForm && nextInput) {
-    // Calcul de l'URL absolue de confirmation.html selon l'hébergement (GitHub Pages ou Domaine personnalisé)
+  if (nextInput) {
     const currentOrigin = window.location.origin;
-    const currentPath = window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/'));
-    const confirmationUrl = currentOrigin + currentPath + '/confirmation.html';
-    nextInput.value = confirmationUrl;
+    // Si on est sur un serveur web (HTTP ou HTTPS)
+    if (currentOrigin && currentOrigin.startsWith('http')) {
+      const currentPath = window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/'));
+      nextInput.value = currentOrigin + currentPath + '/confirmation.html';
+    }
   }
 });
