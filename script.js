@@ -39,10 +39,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const nextInput = document.getElementById('form-next-url');
   if (nextInput) {
     const currentOrigin = window.location.origin;
-    // Si on est sur un serveur web (HTTP ou HTTPS)
     if (currentOrigin && currentOrigin.startsWith('http')) {
-      const currentPath = window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/'));
-      nextInput.value = currentOrigin + currentPath + '/confirmation.html';
+      nextInput.value = currentOrigin + '/confirmation.html';
     }
   }
 });

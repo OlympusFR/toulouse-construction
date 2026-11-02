@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <!-- Redirection automatique vers l'accueil après 5 secondes -->
-  <meta http-equiv="refresh" content="5;url=index.html">
+  <meta http-equiv="refresh" content="5;url=/">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/jpeg" href="images/favicon.jpg">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
-  <link rel="apple-touch-icon" href="images/favicon.jpg">
+  <link rel="apple-touch-icon" href="images/favicon.png">
 
   <!-- SEO Référencement Toulouse et Occitanie -->
   <title>Demande Reçue | Toulouse Construction</title>
@@ -27,7 +27,7 @@
 
   <header class="navbar" id="navbar">
     <div class="container nav-content">
-      <a href="index.html" class="brand-logo" aria-label="Retour à l'accueil Toulouse Construction">
+      <a href="/" class="brand-logo" aria-label="Retour à l'accueil Toulouse Construction">
         <span class="logo-bold">TOULOUSE</span>
         <span class="logo-sub">CONSTRUCTION</span>
       </a>
@@ -56,7 +56,7 @@
         </p>
 
         <p class="auto-redirect-notice">
-          <i class="fa-solid fa-rotate"></i> Redirection automatique vers le site dans <span id="countdown">5</span> secondes...
+          Redirection automatique vers le site dans <span id="countdown">5</span> secondes...
         </p>
 
         <div class="confirmation-summary-box">
@@ -69,7 +69,7 @@
         </div>
 
         <div class="confirmation-actions">
-          <a href="index.html" class="btn btn-primary btn-large">
+          <a href="/" class="btn btn-primary btn-large">
             Retour au site
           </a>
         </div>
@@ -106,7 +106,7 @@
       if (countdownEl) countdownEl.textContent = timeLeft;
       if (timeLeft <= 0) {
         clearInterval(timer);
-        window.location.href = 'index.html';
+        window.location.href = '/';
       }
     }, 1000);
   </script>
