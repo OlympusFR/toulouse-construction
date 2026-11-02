@@ -4,6 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="images/favicon.jpg">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
+  <link rel="apple-touch-icon" href="images/favicon.jpg">
+
   <!-- SEO Référencement Toulouse et Occitanie -->
   <title>Toulouse Construction | Entreprise Générale de Rénovation & Construction à Toulouse</title>
   <meta name="description" content="Toulouse Construction : Expert en rénovation complète d'appartements, maisons, salles de bain et cuisines sur mesure à Toulouse et sa région. Devis gratuit et garantie décennale.">
@@ -18,13 +23,20 @@
   <meta property="og:description" content="Conception, agencement et rénovation d'intérieurs d'exception à Toulouse. Obtenez votre devis et consultation gratuite.">
   <meta property="og:image" content="images/toulouse image devanture -min.webp">
 
-  <!-- Google Fonts & Icons -->
+  <!-- Préchargement et Optimisation Google Fonts (font-display: swap) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   
+  <!-- FontAwesome optimisé en mode non bloquant -->
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+
+  <!-- Feuille de style principale -->
   <link rel="stylesheet" href="style.css">
+
+  <!-- Script JS différé (non bloquant) -->
+  <script src="script.js" defer></script>
 
   <!-- Schema.org Données Structurées pour Google Local Business Toulouse -->
   <script type="application/ld+json">
@@ -34,7 +46,7 @@
     "name": "Toulouse Construction",
     "image": "images/toulouse image devanture -min.webp",
     "telephone": "+33758361017",
-    "email": "Olympus-construction@toulouse-constructions-renovations.fr",
+    "email": "toulouse.building@gmail.com",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Toulouse",
@@ -70,12 +82,12 @@
   <!-- NAVIGATION PRINCIPALE SIMPLE ET ÉPURÉE -->
   <header class="navbar" id="navbar">
     <div class="container nav-content">
-      <a href="#" class="brand-logo">
+      <a href="#" class="brand-logo" aria-label="Accueil Toulouse Construction">
         <span class="logo-bold">TOULOUSE</span>
         <span class="logo-sub">CONSTRUCTION</span>
       </a>
 
-      <nav class="nav-links">
+      <nav class="nav-links" aria-label="Navigation principale">
         <a href="#services">Nos Prestations</a>
         <a href="#methode">Notre Méthode</a>
         <a href="#valeurs">Engagements</a>
@@ -89,15 +101,15 @@
   </header>
 
   <main>
-    <!-- HERO SECTION (STYLE MYHOME : GRAND TITRE + VISUEL IMMERSIF + APPEL À L'ACTION) -->
-    <section class="hero-section" style="background-image: linear-gradient(rgba(17, 24, 39, 0.72), rgba(17, 24, 39, 0.82)), url('images/toulouse image devanture -min.webp');">
+    <!-- HERO SECTION (STYLE MYHOME NYC AVEC IMAGE RÉDUITE POUR ACCÉLÉRATION LCP) -->
+    <section class="hero-section" style="background-image: linear-gradient(rgba(17, 24, 39, 0.72), rgba(17, 24, 39, 0.82)), url('images/hero-bg.jpg');">
       <div class="container hero-content">
         <div class="badge-pill">
           <i class="fa-solid fa-shield-halved"></i> Entreprise Tous Corps d'État & Assurance Décennale
         </div>
         <h1>L'Excellence de la Rénovation & de la Construction à Toulouse</h1>
         <p class="hero-subtext">
-          Donnez vie à vos projets immobiliers. De la conception 3D aux finitions soignées, nous transformons appartements toulousains, maisons de maître et villas contemporaines avec exigence et sérénité.
+          Donnez vie à vos projets immobiliers. De la conception aux finitions soignées, nous transformons appartements toulousains, maisons de maître et villas contemporaines avec exigence et sérénité.
         </p>
 
         <div class="hero-buttons">
@@ -131,7 +143,7 @@
       </div>
     </section>
 
-    <!-- SECTION SERVICES / EXPERTISES CLÉS (CUISINES, SALLES DE BAIN, RÉNOVATION COMPLÈTE) -->
+    <!-- SECTION SERVICES / EXPERTISES CLÉS (DIMENSIONS EXPLICITES AJOUTÉES POUR ÉVITER LE CLS) -->
     <section class="section services-section" id="services">
       <div class="container">
         <div class="section-header text-center">
@@ -144,7 +156,7 @@
           <!-- Carte 1 : Rénovation Complète -->
           <article class="service-card">
             <div class="service-img-wrapper">
-              <img src="images/full remedoel.jpg" alt="Rénovation complète d'appartement et maison à Toulouse" loading="lazy">
+              <img src="images/full-remodel.jpg" alt="Rénovation complète d'appartement et maison à Toulouse" width="600" height="763" loading="lazy">
               <span class="service-badge">Tous Corps d'État</span>
             </div>
             <div class="service-body">
@@ -160,7 +172,7 @@
           <!-- Carte 2 : Cuisines sur Mesure -->
           <article class="service-card">
             <div class="service-img-wrapper">
-              <img src="images/kitchens.jpg" alt="Agencement et pose de cuisine sur mesure à Toulouse" loading="lazy">
+              <img src="images/kitchens.jpg" alt="Agencement et pose de cuisine sur mesure à Toulouse" width="786" height="1000" loading="lazy">
               <span class="service-badge">Design & Fonction</span>
             </div>
             <div class="service-body">
@@ -176,7 +188,7 @@
           <!-- Carte 3 : Salles de Bain -->
           <article class="service-card">
             <div class="service-img-wrapper">
-              <img src="images/bathroom.jpg" alt="Rénovation salle de bain et douche à l'italienne Toulouse" loading="lazy">
+              <img src="images/bathroom.jpg" alt="Rénovation salle de bain et douche à l'italienne Toulouse" width="786" height="1000" loading="lazy">
               <span class="service-badge">Bien-être & Confort</span>
             </div>
             <div class="service-body">
@@ -192,7 +204,7 @@
       </div>
     </section>
 
-    <!-- SECTION NOTRE PROCESSUS (INSPIRÉ DU CYCLE DESIGN-BUILD MYHOME) -->
+    <!-- SECTION NOTRE PROCESSUS (AVEC NOUVELLE IMAGE EXACTE DU PROJET POUR L'ÉTAPE 03) -->
     <section class="section process-section bg-light" id="methode">
       <div class="container">
         <div class="section-header text-center">
@@ -205,11 +217,11 @@
           <!-- Etape 1 -->
           <div class="process-card">
             <div class="process-img">
-              <img src="images/free consult.png.webp" alt="Consultation gratuite et étude de faisabilité" loading="lazy">
+              <img src="images/free consult.png.webp" alt="Consultation gratuite et étude de faisabilité" width="630" height="550" loading="lazy">
               <div class="step-number">01</div>
             </div>
             <div class="process-text">
-              <h4>Consultation & Devis Gratuit</h4>
+              <h3>Consultation & Devis Gratuit</h3>
               <p>Visite sur place à Toulouse pour analyser vos besoins, évaluer la faisabilité technique et établir un devis détaillé au juste prix.</p>
             </div>
           </div>
@@ -217,35 +229,35 @@
           <!-- Etape 2 -->
           <div class="process-card">
             <div class="process-img">
-              <img src="images/design.png.webp" alt="Conception architecturale et choix des matériaux" loading="lazy">
+              <img src="images/design.png.webp" alt="Conception architecturale et choix des matériaux" width="630" height="550" loading="lazy">
               <div class="step-number">02</div>
             </div>
             <div class="process-text">
-              <h4>Conception & Choix des Matériaux</h4>
+              <h3>Conception & Choix des Matériaux</h3>
               <p>Conseils personnalisés sur le choix des finitions, teintes, sols, sanitaires et plans pour optimiser chaque mètre carré.</p>
             </div>
           </div>
 
-          <!-- Etape 3 -->
+          <!-- Etape 3 : IMAGE MANQUANTE INTÉGRÉE ICI -->
           <div class="process-card">
             <div class="process-img">
-              <img src="images/construction.png.webp" alt="Réalisation des travaux et gestion de chantier" loading="lazy">
+              <img src="images/realisation-conduite-chantier.webp" alt="Réalisation des travaux et gestion de chantier" width="630" height="550" loading="lazy">
               <div class="step-number">03</div>
             </div>
             <div class="process-text">
-              <h4>Réalisation & Conduite de Chantier</h4>
+              <h3>Réalisation & Conduite de Chantier</h3>
               <p>Exécution des travaux par nos artisans qualifiés, gestion rigoureuse de la sécurité, du calendrier et des approvisionnements.</p>
             </div>
           </div>
 
-          <!-- Etape 4 -->
+          <!-- Etape 4 : IMAGE OPTIMISÉE POUR PAGSPEED -->
           <div class="process-card">
             <div class="process-img">
-              <img src="images/quality assurance.png" alt="Contrôle qualité et réception de travaux" loading="lazy">
+              <img src="images/quality-assurance.jpg" alt="Contrôle qualité et réception de travaux" width="400" height="348" loading="lazy">
               <div class="step-number">04</div>
             </div>
             <div class="process-text">
-              <h4>Livraison & Garantie Sérénité</h4>
+              <h3>Livraison & Garantie Sérénité</h3>
               <p>Visite de fin de chantier minutieuse, remise des clés d'un lieu propre et prêt à habiter, protégé par nos garanties légales.</p>
             </div>
           </div>
@@ -253,11 +265,11 @@
       </div>
     </section>
 
-    <!-- SECTION VALEURS / ENGAGEMENTS (IMAGE LARGE AVEC CARTE FLOTTANTE) -->
+    <!-- SECTION VALEURS / ENGAGEMENTS (AVEC WIDTH ET HEIGHT EXPLICITES) -->
     <section class="section values-section" id="valeurs">
       <div class="container values-container">
         <div class="values-image-column">
-          <img src="images/our values .jpg.webp" alt="Les valeurs et engagements de Toulouse Construction" class="values-main-img" loading="lazy">
+          <img src="images/our values .jpg.webp" alt="Les valeurs et engagements de Toulouse Construction" class="values-main-img" width="1024" height="810" loading="lazy">
           <div class="values-experience-badge">
             <span class="exp-title">Artisanat Toulousain</span>
             <span class="exp-sub">Rigueur & Passion du métier</span>
@@ -274,7 +286,7 @@
           <div class="value-item">
             <div class="value-icon"><i class="fa-solid fa-file-contract"></i></div>
             <div class="value-content">
-              <h4>Garantie Décennale & Responsabilité Civile</h4>
+              <h3>Garantie Décennale & Responsabilité Civile</h3>
               <p>Chacune de nos réalisations est couverte par une assurance décennale française en bonne et due forme pour une tranquillité d'esprit totale.</p>
             </div>
           </div>
@@ -282,7 +294,7 @@
           <div class="value-item">
             <div class="value-icon"><i class="fa-solid fa-calculator"></i></div>
             <div class="value-content">
-              <h4>Transparence Tarifaire & Respect des Délais</h4>
+              <h3>Transparence Tarifaire & Respect des Délais</h3>
               <p>Pas de frais cachés. Nos devis sont précis, détaillés poste par poste, et notre planning d'intervention est contractualisé dès le départ.</p>
             </div>
           </div>
@@ -290,7 +302,7 @@
           <div class="value-item">
             <div class="value-icon"><i class="fa-solid fa-handshake-angle"></i></div>
             <div class="value-content">
-              <h4>Un Interlocuteur Unique</h4>
+              <h3>Un Interlocuteur Unique</h3>
               <p>Votre conducteur de travaux vous accompagne du premier rendez-vous jusqu'à la livraison finale, avec des points d'étape réguliers.</p>
             </div>
           </div>
@@ -351,7 +363,7 @@
       </div>
     </section>
 
-    <!-- SECTION CONTACT & FORMULAIRE (ENVOI DIRECT PAR FORMPOST/FORMSPREE) -->
+    <!-- SECTION CONTACT & FORMULAIRE DIRECT FORMSUBMIT -> TOULOUSE.BUILDING@GMAIL.COM -->
     <section class="section contact-section" id="contact">
       <div class="container contact-container">
         
@@ -376,7 +388,7 @@
               <div class="c-icon"><i class="fa-solid fa-envelope"></i></div>
               <div>
                 <span class="c-label">E-mail</span>
-                <a href="mailto:Olympus-construction@toulouse-constructions-renovations.fr" class="c-val">Olympus-construction@toulouse-constructions-renovations.fr</a>
+                <a href="mailto:toulouse.building@gmail.com" class="c-val">toulouse.building@gmail.com</a>
               </div>
             </div>
 
@@ -395,13 +407,14 @@
           </div>
         </div>
 
-        <!-- FORMULAIRE -->
+        <!-- FORMULAIRE AVEC REDIRECTION AUTOMATIQUE VERS CONFIRMATION.HTML -->
         <div class="contact-form-panel">
-          <form class="contact-form" action="https://formsubmit.co/Olympus-construction@toulouse-constructions-renovations.fr" method="POST">
-            <!-- Configuration anti-spam et redirection FormSubmit -->
+          <form class="contact-form" id="contact-form" action="https://formsubmit.co/toulouse.building@gmail.com" method="POST">
+            <!-- Configuration anti-spam et redirection automatique -->
             <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_subject" value="Nouveau contact devis - Toulouse Construction">
+            <input type="hidden" name="_subject" value="Nouvelle demande de devis - Toulouse Construction">
             <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_next" id="form-next-url" value="confirmation.html">
 
             <h3>Détaillez vos besoins</h3>
             
@@ -448,7 +461,7 @@
     </section>
   </main>
 
-  <!-- PIED DE PAGE MINIMALISTE ET CONFORME -->
+  <!-- PIED DE PAGE -->
   <footer class="footer">
     <div class="container footer-content">
       <div class="footer-left">
@@ -459,16 +472,15 @@
 
       <div class="footer-contact-info">
         <p><strong>Téléphone :</strong> <a href="tel:0758361017">07 58 36 10 17</a></p>
-        <p><strong>E-mail :</strong> <a href="mailto:Olympus-construction@toulouse-constructions-renovations.fr">Olympus-construction@toulouse-constructions-renovations.fr</a></p>
+        <p><strong>E-mail :</strong> <a href="mailto:toulouse.building@gmail.com">toulouse.building@gmail.com</a></p>
         <p><strong>Localisation :</strong> Toulouse et région Occitanie (31)</p>
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2026 Toulouse Construction - Tous droits réservés. Réalisé avec rigueur et passion.</p>
+        <p>&copy; 2026 Toulouse Construction - Tous droits réservés.</p>
       </div>
     </div>
   </footer>
 
-  <script src="script.js"></script>
 </body>
 </html>
